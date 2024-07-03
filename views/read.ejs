@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/0786c5feec.css" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/gal.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <% if (uploads.length > 0) { %>
+    <div class="gallery">
+      <% uploads.forEach(function(val, index) { %>
+        <div class="container">
+         
+           
+          <div class="thumbs">
+            <a href="#lightbox-<%= index %>"><img src="<%= val %>" alt="Uploaded Image"></a>
+            
+          </div>
+          
+          <span></span>
+          <a href="/del/:<%= filename %>" id="del">DELETE</a>
+          <a href="" id="EDI">EDIT</a>
+          <a href=""/download/<%= filename %>"" id="DOW">DOWNLOAD</a>
+       
+          <div class="lightbox" id="lightbox-<%= index %>">
+            <div class="target">
+              <span></span>
+              <div class="content">
+                <img src="<%= val %>" alt="Uploaded Image">
+                
+              </div>
+              <span></span>
+            </div>
+            
+            
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <h3>No uploads yet</h3>
+  <% } %>
+
+</body>
+</html>

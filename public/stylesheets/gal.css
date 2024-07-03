@@ -1,0 +1,268 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-image: url(https://wallpaperset.com/w/full/e/c/1/128482.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow:auto;
+
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+  cursor: pointer;
+  z-index: 3;
+}
+
+header * {
+  display: inline;
+}
+
+header li {
+  margin: 20px;
+}
+
+header li a {
+  color: white;
+  text-decoration: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  height: 50vh;
+  width: 45vh;
+  border: 1px solid;
+  border-radius: 10px;
+  position: relative;
+  margin: 70px;
+  padding: 10px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+bottom: 0px;}
+
+.thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+}
+
+.thumbs img {
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+  filter: grayscale(50%);
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.thumbs:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.lightbox {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lightbox:target {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.lightbox a.nav {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+  font-weight: 200;
+}
+
+.lightbox a.nav:hover {
+  opacity: 1;
+}
+
+.lightbox .target {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transform: scale(0);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lightbox .target *:first-child, .lightbox .target *:last-child {
+  flex: 0 0 100px;
+  text-align: center;
+}
+
+@media all and (max-width: 600px) {
+  .lightbox .target *:first-child, .lightbox .target *:last-child {
+    flex: 0 0 50px;
+  }
+}
+
+.lightbox .target .content {
+  transform: scale(0.9);
+  opacity: 0;
+  flex: 1 1 auto;
+  align-self: center;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.lightbox .target .content img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: calc(100vh - 40px);
+  display: block;
+  margin: 0;
+}
+
+.lightbox .target:target {
+  transform: scale(1);
+}
+
+.lightbox .target:target .content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.lightbox .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.actions a:hover {
+  opacity: 0.7;
+}
+
+#del{
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+position: relative;
+  top: 180px ;
+  font: 0.5rem sans-serif;
+  background-color: red;
+  color: aliceblue;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: black;
+overflow: hidden;
+display: flex;
+justify-content: center;
+right: 110px;
+cursor: pointer;
+}
+#EDI{
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+position: relative;
+  top: 129px; 
+  font: 0.5rem sans-serif;
+  background-color: rgba(251, 255, 0, 0.747);
+  color: aliceblue;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: black;
+overflow: hidden;
+display: flex;
+justify-content: center;
+center: 0;
+}
+
+#DOW{
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+position: relative;
+  top: 76px ;
+  font: 0.5rem sans-serif;
+  background-color: rgb(11, 238, 11);
+  color: aliceblue;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: black;
+overflow: hidden;
+display: flex;
+justify-content: center;
+left: 110px;
+}
+input{
+  background-color: transparent;
+  color: white;
+font: 1em sans-serif;
+position: relative;
+height: 30%;
+width: 70%;
+top: 50px;
+}
+

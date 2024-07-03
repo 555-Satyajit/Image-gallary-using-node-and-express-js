@@ -1,0 +1,101 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nam{
+    position: relative;
+    top: 250px;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color:transparent;
+    border: 1px solid;
+    border-radius: 10px ;
+    
+}
+#up {
+    padding: 10px 20px;
+    margin: 0;
+    position: absolute; /* Position the input absolutely within its wrapper */
+    top: 0; /* Align at the top of the wrapper */
+    left: 0; /* Align at the left of the wrapper */
+    opacity: 0; /* Hide the actual input */
+}
+
+label {
+    color: rgba(180, 183, 186, 0.463);
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
+    cursor: pointer;
+    position: relative;
+    top: 250px;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color:transparent;
+}
+h1{
+    position: relative;
+    top: 250px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font: 2.5Rem sans-serif;
+}
+#cr{
+    position: relative;
+    top: 250px;
+    left: 0px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: rgba(23, 17, 210, 0.826);
+    font: 0.8rem sans-serif;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
+    width: 50%;
+}
+#cr:hover{
+    background-color: rgba(32, 32, 103, 0.721);
+    cursor: pointer;
+}
+
+#crr{
+    position: relative;
+    top: 325px;
+    right: 330px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: rgba(23, 17, 210, 0.826);
+    font: 0.8rem sans-serif;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
+}
+#crr:hover{
+    background-color: rgba(32, 32, 103, 0.721);
+    cursor: pointer;
+}
+#gal{
+    
+    position: relative;
+    top: 195px;
+    right: 530px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: rgba(23, 17, 210, 0.826);
+    font: 0.8rem sans-serif;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
+    text-decoration-line: none;
+}

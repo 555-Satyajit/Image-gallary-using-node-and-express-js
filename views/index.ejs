@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+   
+    <form action="/create" method="post" ">
+
+
+          <h1>Create Gallary Item </h1>
+        <input type="text" placeholder="Your name" name="name" class="nam">
+        <input type="text" placeholder="Photo description" name="des" class="nam">
+        <label for="up">Choose File</label> 
+        <button type="submit" id="cr">CREATE A MEMORY</button>
+
+
+    </form>
+   
+
+    <form action="/upload" method="post" enctype="multipart/form-data" >
+        <input type="file" id="up" name="fileUpload" multiple>
+        <button type="submit" id="crr">UPLOAD PHOTO </button>
+
+         
+
+           </form>
+   
+
+<a href="/read" id="gal">Gallary</a>
+
+
+           
+
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
